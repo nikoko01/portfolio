@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Nicolas Calderon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    
+  </head>
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="max-width">
+            
+            <div class="logo"><a href='#home'>Portf<span>olio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home">Portada</a></li>
+                <li><a href="#acerca">Acerca de mi</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hola, me llamo</div>
+                <div class="text-2">Nicolas<span> Calderon</span></div>
+            </div>
+        </div>
+    </section>
+    <section class="acerca" id="acerca">
+        <div class="max-width">
+        <div class="a-content">
+            <div class="text-1"id="text-1">Acerca de mi</div>
+            <hr>
+            <div class="text-2">Nací el 14/07/2001 en Alcorcón(Madrid),me dedico en mis ratos libres a mejorar mi estilo de programacion y mi estilo para diseñar paginas web.Poseo el permiso de conducir B.Actualmente soy estudiante , en el grado superior de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</div>
+        </div>
+    </div>
+        </section>
+        <section class="skills" id="skills">
+        <div class="e-content">
+            <div class="text-1">SKILLS</div>
+    </div>
+    <hr>
+        <div class="wrapper">
+            <div class="card">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">HTML</div>
+            </div>
+            <div class="card js">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">CSS</div>
+            </div>
+            <div class="card react">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">JavaScript</div>
+            </div>
+          </div>
+        </section>
+          <script>
+            let options = {
+              startAngle: -1.55,
+              size: 150,
+              value: 0.55,
+              fill: {gradient: ['#a445b2', '#fa4299']}
+            }
+            $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+            function(event, progress, stepValue){
+              $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+            });
+            $(".js .bar").circleProgress({
+              value: 0.40
+            });
+            $(".react .bar").circleProgress({
+              value: 0.20
+            });
+          </script>
+           <section class="contacto" id="contacto">
+            <div class="e-content">
+                <div class="text-1">Contacto</div>
+                <hr>
+        </div>
+        <div class="wrap">
+            <div class="caja">
+              <div class="front-face">
+                <div class="icon">
+      <i class="fas fa-code"></i></div>
+      <span>Telefono</span>
+              </div>
+      <div class="back-face">
+                <span>Telefono</span>
+                <p>+34 660762643</p>
+      </div>
+      </div>
+      <div class="caja">
+              <div class="front-face">
+                <div class="icon">
+      <i class="fas fa-chart-line"></i></div>
+      <span>Correo</span>
+              </div>
+      <div class="back-face">
+                <span>Correo</span>
+                <p>
+        nickfifa94@gmail.com</p>
+      </div>
+      </div>
+      <div class="caja">
+              <div class="front-face">
+                <div class="icon">
+      <i class="fas fa-rocket"></i></div>
+      <span>Red Social</span>
+              </div>
+      <div class="back-face">
+                <span>Red Social</span>
+                <p>
+     nimc0107</p>
+      </div>
+      </div>
+      </div>
+        
+</body>
+</html>
